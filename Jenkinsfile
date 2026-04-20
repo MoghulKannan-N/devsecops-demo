@@ -14,7 +14,7 @@ pipeline {
                 echo 'Running Trivy Filesystem Scan on source code'
                 // We use || true so the pipeline doesnt completely fail for this demo, 
                 // but realistically we'd want it to fail!
-                sh 'trivy fs --exit-code 0 --severity HIGH,CRITICAL . || true'
+                sh '/home/M3ph1st0/.trivy_bin/trivy fs --exit-code 0 --severity HIGH,CRITICAL . || true'
             }
         }
         
